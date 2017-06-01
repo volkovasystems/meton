@@ -43,12 +43,16 @@
 
 	@module-documentation:
 		Extract a list of method names.
+
+		By default, this module will not include constructor
+			because they are classes and may produce issues with other modules.
 	@end-module-documentation
 
 	@include:
 		{
 			"conztant": "conztant",
 			"falzy": "falzy",
+			"portel": "portel",
 			"protype": "protype"
 		}
 	@end-include
@@ -56,6 +60,7 @@
 
 const conztant = require( "conztant" );
 const falzy = require( "falzy" );
+const portel = require( "portel" );
 const protype = require( "protype" );
 
 const meton = function meton( entity ){
@@ -71,9 +76,22 @@ const meton = function meton( entity ){
 		return [ ];
 	}
 
+	let constructor = entity;
+	if( protype( entity, OBJECT ) ){
+		constructor = entity.constructor;
+
+	}else if( !protype( entity, FUNCTION ) ){
+		constructor = portel( entity ).constructor;
+	}
+
 	try{
 		return Object.getOwnPropertyNames( entity )
-			.filter( ( property ) => ( !conztant( property ) && protype( entity[ property ], FUNCTION ) ) );
+			.filter( ( property ) => {
+				return !conztant( property ) &&
+					protype( entity[ property ], FUNCTION ) &&
+					property != "constructor" &&
+					entity[ property ] !== constructor;
+			} );
 
 	}catch( error ){
 		return [ ];

@@ -1,6 +1,6 @@
 {
   "name": "meton",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Extract a list of method names.",
   "main": "meton.deploy.js",
   "support": "meton.support.js",
@@ -26,6 +26,7 @@
   "dependencies": {
     "conztant": "^0.1.0",
     "falzy": "^0.19.0",
+    "portel": "^0.3.0",
     "protype": "^0.21.0"
   }
 }

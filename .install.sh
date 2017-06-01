@@ -2,6 +2,7 @@ yarn add \
 babel-runtime \
 conztant \
 falzy \
+portel \
 protype \
 --save && \
 yarn add \
@@ -15,6 +16,7 @@ webpack \
 bower install \
 conztant \
 falzy \
+portel \
 protype \
 --save \
 --force-latest
