@@ -1,6 +1,6 @@
 {
   "name": "meton",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Extract a list of method names.",
   "main": "meton.js",
   "support": "meton.support.js",
@@ -22,6 +22,10 @@
     "meton"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/meton/issues"
@@ -29,14 +33,14 @@
   "homepage": "https://github.com/volkovasystems/meton#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "conztant": "^0.1.0",
-    "falzy": "^0.19.0",
-    "portel": "^0.3.0",
-    "protype": "^0.21.0"
+    "conztant": "^0.2.0",
+    "falzy": "^0.20.0",
+    "portel": "^0.4.0",
+    "protype": "^0.22.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
