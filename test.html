@@ -1,8 +1,36 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./meton.deploy.js">
-		</script>
+		<title>meton unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./meton.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "meton unit test", function( assert ) {
+
+				class A {
+					constructor( ){ }
+					getA( ){ }
+				}
+
+				class B extends A {
+					constructor( ){ super( ); }
+					getB( ){ }
+				}
+
+				assert.deepEqual( meton( B.prototype ), [ "getB" ], "should be deeply equal" );
+				
+			} );
+		</script>
+	</body>
 </html>

@@ -35,6 +35,10 @@
               			"module": "meton",
               			"author": "Richeve S. Bebedor",
               			"eMail": "richeve.bebedor@gmail.com",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+              				"Vinse Vinalon"
+              			],
               			"repository": "https://github.com/volkovasystems/meton.git",
               			"test": "meton-test.js",
               			"global": true
