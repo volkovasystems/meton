@@ -37,7 +37,7 @@
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon"
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/meton.git",
 			"test": "meton-test.js",
@@ -57,7 +57,6 @@
 			"conztant": "conztant",
 			"falzy": "falzy",
 			"portel": "portel",
-			"protype": "protype"
 		}
 	@end-include
 */
@@ -65,7 +64,6 @@
 const conztant = require( "conztant" );
 const falzy = require( "falzy" );
 const portel = require( "portel" );
-const protype = require( "protype" );
 
 const meton = function meton( entity ){
 	/*;
@@ -81,10 +79,10 @@ const meton = function meton( entity ){
 	}
 
 	let constructor = entity;
-	if( protype( entity, OBJECT ) ){
+	if( typeof entity == "object" ){
 		constructor = entity.constructor;
 
-	}else if( !protype( entity, FUNCTION ) ){
+	}else if( typeof entity != "function" ){
 		constructor = portel( entity ).constructor;
 	}
 
@@ -92,7 +90,7 @@ const meton = function meton( entity ){
 		return Object.getOwnPropertyNames( entity )
 			.filter( ( property ) => {
 				return !conztant( property ) &&
-					protype( entity[ property ], FUNCTION ) &&
+					typeof entity[ property ] == "function" &&
 					property != "constructor" &&
 					entity[ property ] !== constructor;
 			} );
