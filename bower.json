@@ -1,13 +1,13 @@
 {
   "name": "meton",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Extract a list of method names.",
   "main": "meton.deploy.js",
   "support": "meton.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon"
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -26,9 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "conztant": "^0.2.0",
+    "conztant": "^0.3.0",
     "falzy": "^0.20.0",
-    "portel": "^0.4.0",
-    "protype": "^0.22.0"
+    "portel": "^0.4.0"
   }
 }

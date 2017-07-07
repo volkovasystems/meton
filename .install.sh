@@ -3,7 +3,6 @@ babel-runtime \
 conztant \
 falzy \
 portel \
-protype \
 --save && \
 yarn add \
 babel-cli \
@@ -17,6 +16,5 @@ bower install \
 conztant \
 falzy \
 portel \
-protype \
 --save \
 --force-latest

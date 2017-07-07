@@ -37,7 +37,7 @@
               			"eMail": "richeve.bebedor@gmail.com",
               			"contributors": [
               				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-              				"Vinse Vinalon"
+              				"Vinse Vinalon <vinsevinalon@gmail.com>"
               			],
               			"repository": "https://github.com/volkovasystems/meton.git",
               			"test": "meton-test.js",
@@ -57,15 +57,13 @@
               			"conztant": "conztant",
               			"falzy": "falzy",
               			"portel": "portel",
-              			"protype": "protype"
               		}
               	@end-include
-              */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);var _typeof2 = require("babel-runtime/helpers/typeof");var _typeof3 = _interopRequireDefault(_typeof2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var conztant = require("conztant");
 var falzy = require("falzy");
 var portel = require("portel");
-var protype = require("protype");
 
 var meton = function meton(entity) {
 	/*;
@@ -81,10 +79,10 @@ var meton = function meton(entity) {
 	}
 
 	var constructor = entity;
-	if (protype(entity, OBJECT)) {
+	if ((typeof entity === "undefined" ? "undefined" : (0, _typeof3.default)(entity)) == "object") {
 		constructor = entity.constructor;
 
-	} else if (!protype(entity, FUNCTION)) {
+	} else if (typeof entity != "function") {
 		constructor = portel(entity).constructor;
 	}
 
@@ -92,7 +90,7 @@ var meton = function meton(entity) {
 		return (0, _getOwnPropertyNames2.default)(entity).
 		filter(function (property) {
 			return !conztant(property) &&
-			protype(entity[property], FUNCTION) &&
+			typeof entity[property] == "function" &&
 			property != "constructor" &&
 			entity[property] !== constructor;
 		});
