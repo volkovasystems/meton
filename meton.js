@@ -89,10 +89,12 @@ const meton = function meton( entity ){
 	try{
 		return Object.getOwnPropertyNames( entity )
 			.filter( ( property ) => {
-				return !conztant( property ) &&
-					typeof entity[ property ] == "function" &&
-					property != "constructor" &&
-					entity[ property ] !== constructor;
+				return (
+					!conztant( property )
+					&& typeof entity[ property ] == "function"
+					&& property != "constructor"
+					&& entity[ property ] !== constructor
+				);
 			} );
 
 	}catch( error ){
