@@ -1,6 +1,6 @@
 {
 	"name": "meton",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Extract a list of method names.",
 	"main": "meton.deploy.js",
 	"support": "meton.support.js",

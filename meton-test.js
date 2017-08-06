@@ -10,8 +10,14 @@ class A {
 class B extends A {
 	constructor( ){ super( ); }
 	getB( ){ }
+	getC( ){ }
+	getD( ){ }
+	getE( ){ }
+	getF( ){ }
+	getG( ){ }
 }
 
-assert.deepEqual( meton( B.prototype ), [ "getB" ], "should be equal to [ 'getB' ]" );
+let duration = Date.now( );
+assert.deepEqual( meton( B.prototype ), [ "getB", "getC", "getD", "getE", "getF", "getG" ], "should be deeply equal" );
 
-console.log( "ok" );
+console.log( "ok", Date.now( ) - duration, "ms" );
