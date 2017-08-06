@@ -86,18 +86,22 @@ const meton = function meton( entity ){
 		constructor = portel( entity ).constructor;
 	}
 
+	let method = [ ];
 	try{
-		return Object.getOwnPropertyNames( entity )
-			.filter( ( property ) => {
-				return !conztant( property ) &&
-					typeof entity[ property ] == "function" &&
-					property != "constructor" &&
-					entity[ property ] !== constructor;
-			} );
+		method = Object.getOwnPropertyNames( entity );
 
 	}catch( error ){
-		return [ ];
+		return method;
 	}
+
+	return method.filter( ( property ) => {
+		return (
+			!conztant( property )
+			&& typeof entity[ property ] == "function"
+			&& property != "constructor"
+			&& entity[ property ] !== constructor
+		);
+	} );
 };
 
 module.exports = meton;
