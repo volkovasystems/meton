@@ -12,6 +12,6 @@ class B extends A {
 	getB( ){ }
 }
 
-assert.deepEqual( meton( B.prototype ), [ "getB" ], "should be deeply equal" );
+assert.deepEqual( meton( B.prototype ), [ "getB" ], "should be equal to [ 'getB' ]" );
 
 console.log( "ok" );
