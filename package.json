@@ -1,19 +1,17 @@
 {
 	"name": "meton",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Extract a list of method names.",
 	"main": "meton.js",
 	"support": "meton.support.js",
 	"deploy": "meton.deploy.js",
 	"browser": "meton.deploy.js",
 	"scripts": {
-		"build": "babel meton.js --out-file meton.support.js --source-maps && webpack --progress --display-modules",
 		"pristine": "rsetmod clean && flxc execute ./.install.sh",
 		"clear": "rsetmod clean --clear",
-		"formal": "jesy apply '*.json'",
+		"build": "babel meton.js --out-file meton.support.js --source-maps && webpack --progress --display-modules",
 		"pretest": "npm run clear && npm run build",
-		"test": "node meton-test.js",
-		"posttest": "npm run formal"
+		"test": "node meton-test.js"
 	},
 	"repository": {
 		"type": "git",
@@ -37,10 +35,10 @@
 	},
 	"homepage": "https://github.com/volkovasystems/meton#readme",
 	"dependencies": {
-		"babel-runtime": "^6.23.0",
+		"babel-runtime": "^6.25.0",
 		"conztant": "^0.4.0",
 		"falzy": "^0.23.0",
-		"portel": "^0.5.0"
+		"portel": "^0.6.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
@@ -48,6 +46,6 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"source-map-loader": "^0.2.1",
-		"webpack": "^3.4.0"
+		"webpack": "^3.5.0"
 	}
 }
