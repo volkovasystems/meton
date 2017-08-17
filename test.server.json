@@ -5,15 +5,15 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-30T18:04:14.582Z",
-    "end": "2017-07-30T18:04:14.593Z",
-    "duration": 11
+    "start": "2017-08-17T18:00:32.348Z",
+    "end": "2017-08-17T18:00:32.354Z",
+    "duration": 6
   },
   "tests": [
     {
       "title": "should be equal to [ 'getB' ]",
       "fullTitle": "meton \"meton( B.prototype ), [ \"getB\" ]\" should be equal to [ 'getB' ]",
-      "duration": 3,
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     }
@@ -24,7 +24,7 @@
     {
       "title": "should be equal to [ 'getB' ]",
       "fullTitle": "meton \"meton( B.prototype ), [ \"getB\" ]\" should be equal to [ 'getB' ]",
-      "duration": 3,
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     }

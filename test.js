@@ -69,27 +69,27 @@ const meton = require( "./meton.js" );
 //: @server:
 
 describe( "meton", ( ) => {
-	
+
 	describe( `"meton( B.prototype ), [ "getB" ]"`, ( ) => {
 		it( "should be equal to [ 'getB' ]", ( ) => {
 
-		class A {
-			constructor( ){ }
-			getA( ){ }
-		}
+			class A {
+				constructor( ){ }
+				getA( ){ }
+			}
 
-		class B extends A {
-			constructor( ){ super( ); }
-			getB( ){ }
-		}
+			class B extends A {
+				constructor( ){ super( ); }
+				getB( ){ }
+			}
 
-		assert.deepEqual( meton( B.prototype ), [ "getB" ] );
+			assert.deepEqual( meton( B.prototype ), [ "getB" ] );
 
 
 		} );
 	} );
 
-	
+
 } );
 
 
